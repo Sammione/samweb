@@ -35,10 +35,10 @@ export default function Academy() {
                         </p>
 
                         <div className="flex flex-wrap gap-4 mb-10">
-                            <Link href="/enroll" className="btn-primary">
+                            <Link href="/enroll" className="btn-primary transition-all hover:scale-105 active:scale-95 shadow-lg shadow-secondary/20">
                                 Enroll Now
                             </Link>
-                            <Link href="/courses" className="btn-outline">
+                            <Link href="/courses" className="btn-outline transition-all hover:scale-105 active:scale-95">
                                 View All Courses
                             </Link>
                         </div>

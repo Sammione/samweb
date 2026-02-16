@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Send } from "lucide-react";
+import Link from "next/link";
 
 export default function ContactForm() {
     const [formData, setFormData] = useState({
@@ -58,8 +59,18 @@ export default function ContactForm() {
                             </p>
 
                             <div className="flex flex-col gap-4">
-                                <button className="btn-primary w-fit">Partner With Us</button>
-                                <button className="btn-outline w-fit">Apply to Academy</button>
+                                <Link
+                                    href="#contact"
+                                    className="btn-primary w-fit transition-all hover:scale-105 active:scale-95"
+                                >
+                                    Partner With Us
+                                </Link>
+                                <Link
+                                    href="/enroll"
+                                    className="btn-outline w-fit transition-all hover:scale-105 active:scale-95"
+                                >
+                                    Apply to Academy
+                                </Link>
                             </div>
                         </div>
 
