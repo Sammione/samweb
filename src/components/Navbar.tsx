@@ -21,6 +21,7 @@ export default function Navbar() {
         { name: "Products", href: "#products" },
         { name: "About", href: "#about" },
         { name: "Academy", href: "#academy" },
+        { name: "Founder", href: "/founder" },
         { name: "Courses", href: "/courses" },
         { name: "Why NeuraCore", href: "#why-us" },
     ];
