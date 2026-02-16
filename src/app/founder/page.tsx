@@ -28,7 +28,7 @@ export default function FounderPage() {
                             <div className="glass rounded-[2.5rem] p-4 relative group">
                                 <div className="aspect-[4/5] rounded-[2rem] bg-gradient-to-br from-secondary/20 to-primary overflow-hidden relative">
                                     <Image
-                                        src="/founder.jpg"
+                                        src="/founder.png"
                                         alt="Omolaiye Samuel"
                                         fill
                                         className="object-cover transition-transform duration-700 group-hover:scale-110"
