@@ -24,7 +24,7 @@ export default function About() {
                     >
                         <h2 className="text-4xl md:text-5xl font-bold mb-8">Who We Are</h2>
                         <p className="text-lg text-gray-400 mb-8 leading-relaxed">
-                            NeuraCore AI is an applied artificial intelligence company focused on building
+                            QoreLogic is an applied artificial intelligence company focused on building
                             real-world AI systems for infrastructure, finance, and enterprise automation
                             across emerging markets.
                         </p>

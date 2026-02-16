@@ -25,7 +25,7 @@ export default function Navbar() {
         { name: "Academy", href: "/#academy" },
         { name: "Founder", href: "/founder" },
         { name: "Courses", href: "/courses" },
-        { name: "Why NeuraCore", href: "/#why-us" },
+        { name: "Why QoreLogic", href: "/#why-us" },
     ];
 
     return (
@@ -38,9 +38,9 @@ export default function Navbar() {
             <div className="max-w-7xl mx-auto flex justify-between items-center">
                 <Link href="/" className="text-2xl font-bold tracking-tighter flex items-center gap-2">
                     <div className="w-8 h-8 bg-secondary rounded-lg flex items-center justify-center">
-                        <span className="text-white text-xs">N</span>
+                        <span className="text-white text-xs">Q</span>
                     </div>
-                    <span>NeuraCore AI</span>
+                    <span>QoreLogic</span>
                 </Link>
 
                 {/* Desktop Nav */}

@@ -38,7 +38,7 @@ export default function WhyUs() {
                         viewport={{ once: true }}
                         className="text-4xl md:text-5xl font-bold mb-6"
                     >
-                        Why NeuraCore
+                        Why QoreLogic
                     </motion.h2>
                     <div className="w-20 h-1 bg-secondary mx-auto rounded-full" />
                 </div>

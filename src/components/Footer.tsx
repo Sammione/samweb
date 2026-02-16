@@ -13,9 +13,9 @@ export default function Footer() {
                     <div className="col-span-1 md:col-span-1">
                         <Link href="/" className="text-2xl font-bold tracking-tighter flex items-center gap-2 mb-6">
                             <div className="w-8 h-8 bg-secondary rounded-lg flex items-center justify-center">
-                                <span className="text-white text-xs">N</span>
+                                <span className="text-white text-xs">Q</span>
                             </div>
-                            <span>NeuraCore AI</span>
+                            <span>QoreLogic</span>
                         </Link>
                         <p className="text-gray-400 text-sm leading-relaxed mb-6">
                             Engineering the future of intelligent systems for infrastructure,
@@ -58,8 +58,8 @@ export default function Footer() {
                         <h4 className="font-bold mb-6 uppercase tracking-widest text-xs text-gray-500">Contact</h4>
                         <ul className="flex flex-col gap-4">
                             <li>
-                                <Link href="mailto:info@neuracore.ai" className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
-                                    <Mail className="w-4 h-4" /> info@neuracore.ai
+                                <Link href="mailto:info@qorelogic.com" className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
+                                    <Mail className="w-4 h-4" /> info@qorelogic.com
                                 </Link>
                             </li>
                             <li className="text-gray-400">Headquarters: Lagos, Nigeria</li>
@@ -70,7 +70,7 @@ export default function Footer() {
 
                 <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
                     <p className="text-gray-500 text-sm">
-                        © {currentYear} NeuraCore AI. All rights reserved.
+                        © {currentYear} QoreLogic. All rights reserved.
                     </p>
                     <div className="flex gap-8">
                         <Link href="/privacy" className="text-gray-500 hover:text-white text-sm transition-colors">Privacy Policy</Link>

@@ -27,7 +27,7 @@ export default function Academy() {
                             <GraduationCap className="w-4 h-4 text-secondary" />
                             <span className="text-xs font-bold uppercase tracking-widest text-secondary">Learning & Growth</span>
                         </div>
-                        <h2 className="text-4xl md:text-5xl font-bold mb-6">NeuraCore AI Academy</h2>
+                        <h2 className="text-4xl md:text-5xl font-bold mb-6">QoreLogic AI Academy</h2>
                         <p className="text-lg text-gray-400 mb-10 leading-relaxed">
                             We bridge the AI skill gap by training the next generation of engineers and
                             data scientists. Our programs focus on practical, deployable AI skills

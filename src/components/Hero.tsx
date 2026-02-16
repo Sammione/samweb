@@ -35,7 +35,7 @@ export default function Hero() {
                         transition={{ duration: 0.8, delay: 0.4 }}
                         className="text-xl md:text-2xl text-gray-400 mb-10 leading-relaxed md:px-20"
                     >
-                        NeuraCore AI builds predictive, infrastructure-grade AI systems and
+                        QoreLogic builds predictive, infrastructure-grade AI systems and
                         trains the next generation of data scientists.
                     </motion.p>
 

@@ -175,7 +175,7 @@ export default function EnrollPage() {
                                 </div>
                                 <h2 className="text-3xl font-bold mb-4">Application Submitted!</h2>
                                 <p className="text-gray-400 text-lg mb-6">
-                                    Thank you for your interest in NeuraCore AI Academy. Our admissions team will review your application and contact you within 24 hours.
+                                    Thank you for your interest in QoreLogic AI Academy. Our admissions team will review your application and contact you within 24 hours.
                                 </p>
                                 <p className="text-sm text-gray-500">
                                     Check your email for confirmation and next steps.

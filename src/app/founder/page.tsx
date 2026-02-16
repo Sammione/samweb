@@ -85,7 +85,7 @@ export default function FounderPage() {
                                     With a strong background in Machine Learning, Predictive Analytics, and AI System Design, Samuel has built intelligent solutions ranging from forecasting models and AI-powered automation systems to domain-specific chatbots and decision-support platforms. His work spans sustainability analytics, infrastructure stability modeling, AI-driven forecasting, and intelligent product design.
                                 </p>
                                 <p>
-                                    As the Founder of NeuraCore AI, he is leading a double-edged mission: to deploy scalable AI products for global institutions and to cultivate the high-tier talent needed to sustain them. He believes that the next industrial revolution will be powered by intelligence, and his goal is to ensure Africa is at the forefront of that movement.
+                                    As the Founder of QoreLogic, he is leading a double-edged mission: to deploy scalable AI products for global institutions and to cultivate the high-tier talent needed to sustain them. He believes that the next industrial revolution will be powered by intelligence, and his goal is to ensure Africa is at the forefront of that movement.
                                 </p>
                             </div>
 

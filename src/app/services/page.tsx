@@ -84,7 +84,7 @@ export default function ServicesPage() {
                         transition={{ delay: 0.2 }}
                         className="text-gray-400 text-xl max-w-3xl mx-auto leading-relaxed"
                     >
-                        NeuraCore AI provides a comprehensive suite of services designed to empower
+                        QoreLogic provides a comprehensive suite of services designed to empower
                         businesses through technology, data, and specialized education.
                     </motion.p>
                 </div>
@@ -166,7 +166,7 @@ export default function ServicesPage() {
                     <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent pointer-events-none" />
                     <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Scale?</h2>
                     <p className="text-gray-400 text-lg mb-10 max-w-2xl mx-auto">
-                        Whether you need a cutting-edge platform, deep data insights, or a high-tier AI workforce, NeuraCore AI is your strategic partner.
+                        Whether you need a cutting-edge platform, deep data insights, or a high-tier AI workforce, QoreLogic is your strategic partner.
                     </p>
                     <div className="flex flex-col md:flex-row gap-4 justify-center">
                         <Link href="/#contact" className="btn-primary">Request a Proposal</Link>
