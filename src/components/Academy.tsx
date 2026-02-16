@@ -35,11 +35,11 @@ export default function Academy() {
                         </p>
 
                         <div className="flex flex-wrap gap-4 mb-10">
-                            <Link href="#enroll" className="btn-primary">
+                            <Link href="/enroll" className="btn-primary">
                                 Enroll Now
                             </Link>
-                            <Link href="#curriculum" className="btn-outline">
-                                Curriculum Preview
+                            <Link href="/courses" className="btn-outline">
+                                View All Courses
                             </Link>
                         </div>
                     </motion.div>
