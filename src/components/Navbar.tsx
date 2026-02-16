@@ -18,12 +18,12 @@ export default function Navbar() {
     }, []);
 
     const navLinks = [
-        { name: "Products", href: "#products" },
-        { name: "About", href: "#about" },
-        { name: "Academy", href: "#academy" },
+        { name: "Products", href: "/#products" },
+        { name: "About", href: "/#about" },
+        { name: "Academy", href: "/#academy" },
         { name: "Founder", href: "/founder" },
         { name: "Courses", href: "/courses" },
-        { name: "Why NeuraCore", href: "#why-us" },
+        { name: "Why NeuraCore", href: "/#why-us" },
     ];
 
     return (
@@ -52,7 +52,7 @@ export default function Navbar() {
                             {link.name}
                         </Link>
                     ))}
-                    <Link href="#contact" className="btn-primary py-2 text-sm">
+                    <Link href="/#contact" className="btn-primary py-2 text-sm">
                         Contact Us
                     </Link>
                 </div>
@@ -80,7 +80,7 @@ export default function Navbar() {
                         </Link>
                     ))}
                     <Link
-                        href="#contact"
+                        href="/#contact"
                         className="btn-primary text-center"
                         onClick={() => setIsMobileMenuOpen(false)}
                     >
