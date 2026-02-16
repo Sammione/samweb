@@ -76,7 +76,7 @@ export default function Products() {
                                 {product.description}
                             </p>
                             <Link
-                                href={`#${product.title.toLowerCase().replace(/ /g, "-")}`}
+                                href={`/products/${product.title.toLowerCase().replace(/ /g, "-")}`}
                                 className="text-white text-xs font-bold uppercase tracking-widest hover:text-secondary transition-colors inline-block"
                             >
                                 Learn More →
