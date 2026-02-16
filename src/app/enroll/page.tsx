@@ -5,14 +5,9 @@ import { useState } from "react";
 import {
     GraduationCap,
     User,
-    Mail,
-    Phone,
     BookOpen,
-    Calendar,
     CheckCircle2,
-    ArrowRight,
-    Briefcase,
-    MapPin
+    ArrowRight
 } from "lucide-react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";

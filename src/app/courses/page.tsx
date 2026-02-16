@@ -342,7 +342,7 @@ export default function CoursesPage() {
                                 <div>
                                     <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
                                         <CheckCircle2 className="w-5 h-5 text-secondary" />
-                                        What You'll Learn
+                                        What You&apos;ll Learn
                                     </h3>
                                     <ul className="space-y-3">
                                         {course.whatYouLearn.map((item, i) => (
