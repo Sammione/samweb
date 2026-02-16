@@ -63,27 +63,46 @@ export default function EnrollPage() {
         e.preventDefault();
         setIsSubmitting(true);
 
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 2000));
-
-        setIsSubmitting(false);
-        setIsSubmitted(true);
-
-        // Reset form after 5 seconds
-        setTimeout(() => {
-            setIsSubmitted(false);
-            setFormData({
-                fullName: "",
-                email: "",
-                phone: "",
-                country: "",
-                course: "",
-                experienceLevel: "",
-                intakeDate: "",
-                employmentStatus: "",
-                motivation: ""
+        try {
+            const response = await fetch(process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT || "https://formspree.io/f/mwvnbewj", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+                body: JSON.stringify(formData)
             });
-        }, 5000);
+
+            if (response.ok) {
+                setIsSubmitted(true);
+                // Reset form
+                setFormData({
+                    fullName: "",
+                    email: "",
+                    phone: "",
+                    country: "",
+                    course: "",
+                    experienceLevel: "",
+                    intakeDate: "",
+                    employmentStatus: "",
+                    motivation: ""
+                });
+            } else {
+                const data = await response.json();
+                alert(data.error || "Something went wrong. Please try again.");
+            }
+        } catch (error) {
+            alert("External error. Please check your internet connection.");
+        } finally {
+            setIsSubmitting(false);
+        }
+
+        // Hide success message after 10 seconds (increased from 5)
+        if (isSubmitted) {
+            setTimeout(() => {
+                setIsSubmitted(false);
+            }, 10000);
+        }
     };
 
     return (

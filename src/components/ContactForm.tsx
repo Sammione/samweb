@@ -11,15 +11,33 @@ export default function ContactForm() {
     });
     const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setStatus("submitting");
-        // Simulate API call
-        setTimeout(() => {
-            setStatus("success");
-            setFormData({ name: "", email: "", message: "" });
-            setTimeout(() => setStatus("idle"), 3000);
-        }, 1500);
+
+        try {
+            const response = await fetch(process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT || "https://formspree.io/f/mwvnbewj", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+                body: JSON.stringify(formData)
+            });
+
+            if (response.ok) {
+                setStatus("success");
+                setFormData({ name: "", email: "", message: "" });
+                setTimeout(() => setStatus("idle"), 5000);
+            } else {
+                const data = await response.json();
+                alert(data.error || "Something went wrong. Please try again.");
+                setStatus("idle");
+            }
+        } catch (error) {
+            alert("Error sending message. Please check your connection.");
+            setStatus("idle");
+        }
     };
 
     return (
