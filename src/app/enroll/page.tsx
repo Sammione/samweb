@@ -91,7 +91,7 @@ export default function EnrollPage() {
                 const data = await response.json();
                 alert(data.error || "Something went wrong. Please try again.");
             }
-        } catch (error) {
+        } catch {
             alert("External error. Please check your internet connection.");
         } finally {
             setIsSubmitting(false);

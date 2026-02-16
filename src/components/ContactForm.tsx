@@ -34,7 +34,7 @@ export default function ContactForm() {
                 alert(data.error || "Something went wrong. Please try again.");
                 setStatus("idle");
             }
-        } catch (error) {
+        } catch {
             alert("Error sending message. Please check your connection.");
             setStatus("idle");
         }

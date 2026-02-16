@@ -47,7 +47,7 @@ const courses = [
         ],
         capstoneProject: {
             title: "Customer Churn Prediction System",
-            description: "Build an end-to-end data science project analyzing customer behavior patterns to predict churn. You'll collect, clean, and analyze real-world data, create insightful visualizations, and present actionable business recommendations.",
+            description: "Build an end-to-end data science project analyzing customer behavior patterns to predict churn. You&apos;ll collect, clean, and analyze real-world data, create insightful visualizations, and present actionable business recommendations.",
             deliverables: [
                 "Complete data analysis report",
                 "Interactive dashboards",
