@@ -411,7 +411,7 @@ export default function EnrollPage() {
                             <p className="text-gray-400 mb-4">
                                 Want to learn more about our courses first?
                             </p>
-                            <Link href="/courses" className="btn-outline inline-flex items-center gap-2">
+                            <Link href="/academy" className="btn-outline inline-flex items-center gap-2">
                                 View All Courses
                                 <ArrowRight className="w-4 h-4" />
                             </Link>

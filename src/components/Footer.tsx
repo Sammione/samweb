@@ -47,10 +47,10 @@ export default function Footer() {
                     <div>
                         <h4 className="font-bold mb-6 uppercase tracking-widest text-xs text-gray-500">Academy</h4>
                         <ul className="flex flex-col gap-4">
-                            <li><Link href="/#academy" className="text-gray-400 hover:text-white transition-colors">Data Science</Link></li>
-                            <li><Link href="/#academy" className="text-gray-400 hover:text-white transition-colors">Deep Learning</Link></li>
-                            <li><Link href="/#academy" className="text-gray-400 hover:text-white transition-colors">AI Engineering</Link></li>
-                            <li><Link href="/#academy" className="text-gray-400 hover:text-white transition-colors">Enrollment</Link></li>
+                            <li><Link href="/academy" className="text-gray-400 hover:text-white transition-colors">Data Science</Link></li>
+                            <li><Link href="/academy" className="text-gray-400 hover:text-white transition-colors">Deep Learning</Link></li>
+                            <li><Link href="/academy" className="text-gray-400 hover:text-white transition-colors">AI Engineering</Link></li>
+                            <li><Link href="/enroll" className="text-gray-400 hover:text-white transition-colors">Enrollment</Link></li>
                         </ul>
                     </div>
 

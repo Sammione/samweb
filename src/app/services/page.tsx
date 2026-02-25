@@ -32,17 +32,17 @@ const services = [
         color: "secondary"
     },
     {
-        title: "High-Impact Training",
-        description: "Bridging the talent gap through our specialized AI Academy. We provide hands-on, project-based training to students and professionals looking to master Data Science and AI Engineering.",
-        icon: <GraduationCap className="w-10 h-10" />,
-        features: ["Corporate Training", "Student Mentorship", "Technical Workshops", "Curriculum Design"],
+        title: "Large Language Models & RAG",
+        description: "Leverage the power of Generative AI. We design and deploy custom LLM solutions, retrieval-augmented generation (RAG) systems, and intelligent agents tailored to your business data.",
+        icon: <Cpu className="w-10 h-10" />,
+        features: ["Custom LLM Workflows", "Vector Database Setup", "AI Agent Development", "Semantic Search Systems"],
         color: "blue"
     },
     {
         title: "Strategic AI Research",
         description: "Pioneering research into intelligent systems and infrastructure stability. We conduct deep technical research to develop proprietary algorithms and innovative solutions for emerging markets.",
         icon: <Microscope className="w-10 h-10" />,
-        features: ["Algorithm Development", "infrastructure Research", "System Optimization", "Whitepaper Publication"],
+        features: ["Algorithm Development", "Infrastructure Research", "System Optimization", "Whitepaper Publication"],
         color: "secondary"
     }
 ];
@@ -155,6 +155,32 @@ export default function ServicesPage() {
                             <div className="text-secondary mb-4 flex justify-center"><Search size={40} /></div>
                             <h4 className="text-xl font-bold">Future-Focused</h4>
                             <p className="text-gray-400">We don&apos;t just solve today&apos;s problems; we build systems that scale for tomorrow&apos;s challenges.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Academy CTA Section */}
+            <section className="py-24 bg-primary relative overflow-hidden">
+                <div className="max-w-7xl mx-auto section-padding relative z-10">
+                    <div className="glass-card p-12 md:p-16 flex flex-col md:flex-row items-center justify-between gap-12">
+                        <div className="max-w-2xl">
+                            <div className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full mb-6">
+                                <GraduationCap className="w-4 h-4 text-secondary" />
+                                <span className="text-xs font-bold uppercase tracking-widest text-secondary">
+                                    QoreLogic AI Academy
+                                </span>
+                            </div>
+                            <h2 className="text-4xl font-bold mb-6">Training the Next Generation of AI Talent</h2>
+                            <p className="text-gray-400 text-lg leading-relaxed mb-8">
+                                Looking to master AI, Machine Learning, or Data Science? Our Academy provides hands-on, intensive training programs designed for real-world impact.
+                            </p>
+                            <Link href="/academy" className="btn-primary inline-flex items-center gap-2">
+                                Explorer Academy Courses <ArrowRight className="w-5 h-5" />
+                            </Link>
+                        </div>
+                        <div className="w-full md:w-1/3 text-center md:text-right">
+                            <GraduationCap className="w-32 h-32 md:w-48 md:h-48 text-secondary opacity-20 inline-block" />
                         </div>
                     </div>
                 </div>

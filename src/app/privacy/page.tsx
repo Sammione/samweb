@@ -30,7 +30,7 @@ export default function PrivacyPage() {
                     <p>We do not sell your personal information. We may share your information with trusted service providers who assist us in operating our website or conducting our business, provided they agree to keep this information confidential.</p>
 
                     <h2 className="text-2xl font-bold text-white mt-8 mb-4">5. Your Rights</h2>
-                    <p>You have the right to access, correct, or delete your personal information. If you wish to exercise these rights, please contact us at info@qorelogic.com.</p>
+                    <p>You have the right to access, correct, or delete your personal information. If you wish to exercise these rights, please contact us at <a href="mailto:info@qorelogic.com" className="text-secondary hover:underline">info@qorelogic.com</a>.</p>
                 </div>
             </div>
             <Footer />

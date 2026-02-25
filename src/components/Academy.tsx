@@ -38,7 +38,7 @@ export default function Academy() {
                             <Link href="/enroll" className="btn-primary transition-all hover:scale-105 active:scale-95 shadow-lg shadow-secondary/20">
                                 Enroll Now
                             </Link>
-                            <Link href="/courses" className="btn-outline transition-all hover:scale-105 active:scale-95">
+                            <Link href="/academy" className="btn-outline transition-all hover:scale-105 active:scale-95">
                                 View All Courses
                             </Link>
                         </div>

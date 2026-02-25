@@ -19,13 +19,12 @@ export default function Navbar() {
 
     const navLinks = [
         { name: "Services", href: "/services" },
-        { name: "Resources", href: "/resources" },
+        { name: "Academy", href: "/academy" },
         { name: "Products", href: "/#products" },
+        { name: "Resources", href: "/resources" },
         { name: "About", href: "/#about" },
-        { name: "Academy", href: "/#academy" },
         { name: "Founder", href: "/founder" },
-        { name: "Courses", href: "/courses" },
-        { name: "Why QoreLogic", href: "/#why-us" },
+        { name: "Why Us", href: "/#why-us" },
     ];
 
     return (

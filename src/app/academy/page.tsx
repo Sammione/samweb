@@ -259,7 +259,7 @@ const courses = [
     }
 ];
 
-export default function CoursesPage() {
+export default function AcademyPage() {
     return (
         <main className="min-h-screen bg-[#0B0F1A]">
             <Navbar />
