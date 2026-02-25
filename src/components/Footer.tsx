@@ -35,22 +35,22 @@ export default function Footer() {
                     </div>
 
                     <div>
-                        <h4 className="font-bold mb-6 uppercase tracking-widest text-xs text-gray-500">Products</h4>
+                        <h4 className="font-bold mb-6 uppercase tracking-widest text-xs text-gray-500">Services</h4>
                         <ul className="flex flex-col gap-4">
-                            <li><Link href="/#products" className="text-gray-400 hover:text-white transition-colors">Grid Intelligence</Link></li>
-                            <li><Link href="/#products" className="text-gray-400 hover:text-white transition-colors">Predictive Engine</Link></li>
-                            <li><Link href="/#products" className="text-gray-400 hover:text-white transition-colors">ESG Platform</Link></li>
-                            <li><Link href="/#products" className="text-gray-400 hover:text-white transition-colors">AI Automation</Link></li>
+                            <li><Link href="/services" className="text-gray-400 hover:text-white transition-colors">Enterprise AI</Link></li>
+                            <li><Link href="/services" className="text-gray-400 hover:text-white transition-colors">Data Strategy</Link></li>
+                            <li><Link href="/services" className="text-gray-400 hover:text-white transition-colors">Web Systems</Link></li>
+                            <li><Link href="/services" className="text-gray-400 hover:text-white transition-colors">Strategic Research</Link></li>
                         </ul>
                     </div>
 
                     <div>
-                        <h4 className="font-bold mb-6 uppercase tracking-widest text-xs text-gray-500">Academy</h4>
+                        <h4 className="font-bold mb-6 uppercase tracking-widest text-xs text-gray-500">Company</h4>
                         <ul className="flex flex-col gap-4">
-                            <li><Link href="/academy" className="text-gray-400 hover:text-white transition-colors">Data Science</Link></li>
-                            <li><Link href="/academy" className="text-gray-400 hover:text-white transition-colors">Deep Learning</Link></li>
-                            <li><Link href="/academy" className="text-gray-400 hover:text-white transition-colors">AI Engineering</Link></li>
-                            <li><Link href="/enroll" className="text-gray-400 hover:text-white transition-colors">Enrollment</Link></li>
+                            <li><Link href="/about" className="text-gray-400 hover:text-white transition-colors">About Mission</Link></li>
+                            <li><Link href="/about" className="text-gray-400 hover:text-white transition-colors">The Founder</Link></li>
+                            <li><Link href="/resources" className="text-gray-400 hover:text-white transition-colors">Resources</Link></li>
+                            <li><Link href="/#contact" className="text-gray-400 hover:text-white transition-colors">Contact Us</Link></li>
                         </ul>
                     </div>
 

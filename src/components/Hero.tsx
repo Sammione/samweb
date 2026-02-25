@@ -45,11 +45,11 @@ export default function Hero() {
                         transition={{ duration: 0.8, delay: 0.6 }}
                         className="flex flex-col md:flex-row items-center justify-center gap-4"
                     >
-                        <Link href="#products" className="btn-primary flex items-center gap-2 group transition-all hover:scale-105 active:scale-95">
-                            Explore Products
+                        <Link href="/services" className="btn-primary flex items-center gap-2 group transition-all hover:scale-105 active:scale-95">
+                            Explore Services
                             <span className="group-hover:translate-x-1 transition-transform">→</span>
                         </Link>
-                        <Link href="#academy" className="btn-outline transition-all hover:scale-105 active:scale-95">
+                        <Link href="/academy" className="btn-outline transition-all hover:scale-105 active:scale-95">
                             Join AI Academy
                         </Link>
                     </motion.div>

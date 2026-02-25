@@ -408,12 +408,52 @@ export default function AcademyPage() {
                                     Enroll in This Course
                                     <ArrowRight className="w-4 h-4" />
                                 </Link>
-                                <Link href="#contact" className="btn-outline">
+                                <Link href="/#contact" className="btn-outline">
                                     Ask Questions
                                 </Link>
                             </div>
                         </motion.div>
                     ))}
+                </div>
+            </section>
+
+            {/* Methodology Section */}
+            <section className="py-24 bg-[#0D121F] relative overflow-hidden">
+                <div className="max-w-7xl mx-auto section-padding relative z-10">
+                    <div className="text-center mb-16">
+                        <h2 className="text-4xl font-bold mb-6">Our Methodology</h2>
+                        <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+                            We don&apos;t just teach theory. We build engineers through a rigorous, project-first approach.
+                        </p>
+                    </div>
+                    <div className="grid md:grid-cols-3 gap-8">
+                        {[
+                            { title: "Project-First Learning", desc: "Every module is built around a real-world project that mimics industry challenges." },
+                            { title: "Expert Mentorship", desc: "Get direct feedback and guidance from senior AI engineers and practitioners." },
+                            { title: "Modern Stack", desc: "Learn with the same tools used by top tech companies globally." }
+                        ].map((item, i) => (
+                            <div key={i} className="glass p-8 rounded-2xl border border-white/5">
+                                <h4 className="text-xl font-bold mb-4 text-secondary">{item.title}</h4>
+                                <p className="text-gray-400 leading-relaxed">{item.desc}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Partnerships Section */}
+            <section className="py-24 relative overflow-hidden">
+                <div className="max-w-5xl mx-auto section-padding relative z-10">
+                    <div className="glass-card p-12 text-center relative overflow-hidden">
+                        <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent pointer-events-none" />
+                        <h2 className="text-4xl font-bold mb-6">Institutional Partnerships</h2>
+                        <p className="text-gray-400 text-lg mb-10 max-w-2xl mx-auto">
+                            Are you a company looking to upskill your team or a university seeking to integrate practical AI curriculum? We offer tailored partnership programs.
+                        </p>
+                        <Link href="/#contact" className="btn-primary">
+                            Inquire for Partnership
+                        </Link>
+                    </div>
                 </div>
             </section>
 

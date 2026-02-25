@@ -16,6 +16,8 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
+import Products from "@/components/Products";
+
 const services = [
     {
         title: "Intelligent Web Development",
@@ -136,51 +138,45 @@ export default function ServicesPage() {
                 </div>
             </section>
 
-            {/* Why Work With Us Section */}
-            <section className="py-32 bg-[#0D121F] relative overflow-hidden">
-                <div className="max-w-7xl mx-auto section-padding relative z-10 text-center">
-                    <h2 className="text-4xl font-bold mb-16 text-center">Why Partner With Us?</h2>
-                    <div className="grid md:grid-cols-3 gap-12">
-                        <div className="space-y-4">
-                            <div className="text-secondary mb-4 flex justify-center"><Globe size={40} /></div>
-                            <h4 className="text-xl font-bold">Global Standards</h4>
-                            <p className="text-gray-400">We apply international best practices in every line of code and every data model we build.</p>
-                        </div>
-                        <div className="space-y-4">
-                            <div className="text-secondary mb-4 flex justify-center"><Database size={40} /></div>
-                            <h4 className="text-xl font-bold">Data-Centric Approach</h4>
-                            <p className="text-gray-400">Every decision we make is backed by rigorous analysis and empirical evidence.</p>
-                        </div>
-                        <div className="space-y-4">
-                            <div className="text-secondary mb-4 flex justify-center"><Search size={40} /></div>
-                            <h4 className="text-xl font-bold">Future-Focused</h4>
-                            <p className="text-gray-400">We don&apos;t just solve today&apos;s problems; we build systems that scale for tomorrow&apos;s challenges.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            {/* Products Section Integration */}
+            <Products />
 
-            {/* Academy CTA Section */}
-            <section className="py-24 bg-primary relative overflow-hidden">
+            {/* Engineering Philosophy / Write up */}
+            <section className="py-32 bg-[#0D121F] relative overflow-hidden">
                 <div className="max-w-7xl mx-auto section-padding relative z-10">
-                    <div className="glass-card p-12 md:p-16 flex flex-col md:flex-row items-center justify-between gap-12">
-                        <div className="max-w-2xl">
-                            <div className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full mb-6">
-                                <GraduationCap className="w-4 h-4 text-secondary" />
-                                <span className="text-xs font-bold uppercase tracking-widest text-secondary">
-                                    QoreLogic AI Academy
-                                </span>
-                            </div>
-                            <h2 className="text-4xl font-bold mb-6">Training the Next Generation of AI Talent</h2>
-                            <p className="text-gray-400 text-lg leading-relaxed mb-8">
-                                Looking to master AI, Machine Learning, or Data Science? Our Academy provides hands-on, intensive training programs designed for real-world impact.
+                    <div className="grid md:grid-cols-2 gap-16 items-center">
+                        <div>
+                            <h2 className="text-4xl font-bold mb-8">Our Engineering Philosophy</h2>
+                            <p className="text-lg text-gray-400 mb-6 leading-relaxed">
+                                At QoreLogic, we don&apos;t just write code; we architect systems. We believe that the true value of AI lies in its application to critical infrastructure and enterprise stability.
                             </p>
-                            <Link href="/academy" className="btn-primary inline-flex items-center gap-2">
-                                Explorer Academy Courses <ArrowRight className="w-5 h-5" />
-                            </Link>
+                            <p className="text-lg text-gray-400 mb-8 leading-relaxed">
+                                Our data-first approach ensures that every model we deploy is grounded in empirical evidence and optimized for the unique challenges of emerging markets.
+                            </p>
+                            <div className="flex gap-12">
+                                <div>
+                                    <div className="text-3xl font-bold text-secondary mb-1">Scale</div>
+                                    <p className="text-gray-500 text-sm">Built for enterprise growth</p>
+                                </div>
+                                <div>
+                                    <div className="text-3xl font-bold text-secondary mb-1">Trust</div>
+                                    <p className="text-gray-500 text-sm">Security at the core</p>
+                                </div>
+                            </div>
                         </div>
-                        <div className="w-full md:w-1/3 text-center md:text-right">
-                            <GraduationCap className="w-32 h-32 md:w-48 md:h-48 text-secondary opacity-20 inline-block" />
+                        <div className="space-y-8">
+                            <div className="glass p-8 rounded-2xl">
+                                <h4 className="text-xl font-bold mb-4 flex items-center gap-2 text-secondary">
+                                    <Globe className="w-5 h-5" /> Global Standards
+                                </h4>
+                                <p className="text-gray-400">We apply international best practices in every line of code and every data model we build.</p>
+                            </div>
+                            <div className="glass p-8 rounded-2xl">
+                                <h4 className="text-xl font-bold mb-4 flex items-center gap-2 text-secondary">
+                                    <Database className="w-5 h-5" /> Data-Centric Approach
+                                </h4>
+                                <p className="text-gray-400">Every decision we make is backed by rigorous analysis and empirical evidence.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -196,7 +192,7 @@ export default function ServicesPage() {
                     </p>
                     <div className="flex flex-col md:flex-row gap-4 justify-center">
                         <Link href="/#contact" className="btn-primary">Request a Proposal</Link>
-                        <Link href="/founder" className="btn-outline">Talk to the Founder</Link>
+                        <Link href="/about" className="btn-outline">About Our Mission</Link>
                     </div>
                 </div>
             </section>
