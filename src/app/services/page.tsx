@@ -4,13 +4,11 @@ import { motion } from "framer-motion";
 import {
     Layout,
     BarChart3,
-    GraduationCap,
     Microscope,
     ArrowRight,
     Globe,
     Database,
-    Cpu,
-    Search
+    Cpu
 } from "lucide-react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";

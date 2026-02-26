@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Check, Linkedin, Twitter, Github, Award, Rocket, Heart, Globe, Cpu } from "lucide-react";
+import { Check, Linkedin, Twitter, Github, Award, Rocket, Heart, Globe } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
