@@ -11,7 +11,25 @@ export default function Home() {
     <main className="min-h-screen bg-[#0B0F1A] flex flex-col">
       <Navbar />
 
-      {/* Selection Portal */}
+      {/* Centering Identity Intro */}
+      <div className="pt-32 pb-6 text-center relative z-20">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-4xl mx-auto px-6"
+        >
+          <h1 className="text-4xl md:text-6xl font-black mb-6 tracking-tight leading-tight uppercase">
+            Engineering Intelligence. <br />
+            <span className="text-secondary">Empowering People.</span>
+          </h1>
+          <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-medium">
+            QoreLogic is the dual engine for infrastructure-grade AI solutions
+            and professional mastery. Choose your path.
+          </p>
+        </motion.div>
+      </div>
+
       <div className="flex-1 flex flex-col lg:flex-row relative">
         {/* Background Decoration */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
