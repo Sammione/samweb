@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Linkedin, Mail, Twitter, Github } from "lucide-react";
 
 export default function Footer() {
@@ -11,9 +12,14 @@ export default function Footer() {
             <div className="section-padding">
                 <div className="grid md:grid-cols-4 gap-12 mb-16">
                     <div className="col-span-1 md:col-span-1">
-                        <Link href="/" className="text-2xl font-bold tracking-tighter flex items-center gap-2 mb-6">
-                            <div className="w-8 h-8 bg-secondary rounded-lg flex items-center justify-center">
-                                <span className="text-white text-xs">Q</span>
+                        <Link href="/" className="text-2xl font-bold tracking-tighter flex items-center gap-3 mb-6">
+                            <div className="w-10 h-10 relative">
+                                <Image
+                                    src="/logo.png"
+                                    alt="QoreLogic Logo"
+                                    fill
+                                    className="object-contain"
+                                />
                             </div>
                             <span>QoreLogic</span>
                         </Link>

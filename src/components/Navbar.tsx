@@ -5,6 +5,8 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 
+import Image from "next/image";
+
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -33,9 +35,15 @@ export default function Navbar() {
             )}
         >
             <div className="max-w-7xl mx-auto flex justify-between items-center">
-                <Link href="/" className="text-2xl font-bold tracking-tighter flex items-center gap-2">
-                    <div className="w-8 h-8 bg-secondary rounded-lg flex items-center justify-center">
-                        <span className="text-white text-xs">Q</span>
+                <Link href="/" className="text-2xl font-bold tracking-tighter flex items-center gap-3">
+                    <div className="w-10 h-10 relative">
+                        <Image
+                            src="/logo.png"
+                            alt="QoreLogic Logo"
+                            fill
+                            className="object-contain"
+                            priority
+                        />
                     </div>
                     <span>QoreLogic</span>
                 </Link>
