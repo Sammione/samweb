@@ -18,7 +18,7 @@ export default function Footer() {
                                     src="/logo.png"
                                     alt="QoreLogic Logo"
                                     fill
-                                    className="object-contain"
+                                    className="object-contain mix-blend-screen brightness-110"
                                 />
                             </div>
                             <span>QoreLogic</span>

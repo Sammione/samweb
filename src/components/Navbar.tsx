@@ -41,7 +41,7 @@ export default function Navbar() {
                             src="/logo.png"
                             alt="QoreLogic Logo"
                             fill
-                            className="object-contain"
+                            className="object-contain mix-blend-screen brightness-110"
                             priority
                         />
                     </div>
