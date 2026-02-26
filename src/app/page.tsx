@@ -1,38 +1,74 @@
+"use client";
+
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
+import { motion } from "framer-motion";
+import { Cpu, GraduationCap, ArrowRight } from "lucide-react";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#0B0F1A]">
+    <main className="min-h-screen bg-[#0B0F1A] flex flex-col">
       <Navbar />
-      <Hero />
 
-      {/* Brief Teaser Section */}
-      <section className="py-24 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto section-padding">
-          <div className="grid md:grid-cols-2 gap-8">
-            <Link href="/services" className="glass-card group p-10 hover:border-secondary/50 transition-all">
-              <h3 className="text-3xl font-bold mb-4">Enterprise Services</h3>
-              <p className="text-gray-400 mb-6 text-lg">Custom AI development, data analysis, and strategic research for infrastructure and growth.</p>
-              <span className="text-secondary font-bold flex items-center gap-2 group-hover:gap-4 transition-all">
-                Learn More <div className="w-5 h-5">→</div>
-              </span>
-            </Link>
-            <Link href="/academy" className="glass-card group p-10 hover:border-secondary/50 transition-all">
-              <h3 className="text-3xl font-bold mb-4">AI Academy</h3>
-              <p className="text-gray-400 mb-6 text-lg">Industry-leading training programs designed to transform you into a skilled AI professional.</p>
-              <span className="text-secondary font-bold flex items-center gap-2 group-hover:gap-4 transition-all">
-                View All Courses <div className="w-5 h-5">→</div>
-              </span>
-            </Link>
-          </div>
+      {/* Selection Portal */}
+      <div className="flex-1 flex flex-col lg:flex-row relative">
+        {/* Background Decoration */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-secondary/10 rounded-full blur-[150px] animate-pulse" />
         </div>
-      </section>
 
-      <ContactForm />
+        {/* Services Section */}
+        <Link
+          href="/services"
+          className="group relative flex-1 flex flex-col items-center justify-center p-12 overflow-hidden border-b lg:border-b-0 lg:border-r border-white/5 hover:bg-white/[0.02] transition-all duration-700"
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="relative z-10 text-center"
+          >
+            <div className="w-24 h-24 lg:w-32 lg:h-32 glass rounded-[2.5rem] flex items-center justify-center text-secondary mb-10 mx-auto group-hover:scale-110 group-hover:rotate-6 transition-all duration-700 shadow-2xl shadow-secondary/10">
+              <Cpu className="w-12 h-12 lg:w-16 lg:h-16" />
+            </div>
+            <h2 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 tracking-tighter uppercase transition-colors group-hover:text-secondary group-hover:italic">
+              Services
+            </h2>
+            <div className="flex items-center justify-center gap-3 text-gray-500 font-bold uppercase tracking-[0.3em] text-xs md:text-sm translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-700">
+              Enterprise AI <ArrowRight className="w-5 h-5 text-secondary" />
+            </div>
+          </motion.div>
+        </Link>
+
+        {/* Academy Section */}
+        <Link
+          href="/academy"
+          className="group relative flex-1 flex flex-col items-center justify-center p-12 overflow-hidden hover:bg-white/[0.02] transition-all duration-700"
+        >
+          <div className="absolute inset-0 bg-gradient-to-bl from-secondary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            className="relative z-10 text-center"
+          >
+            <div className="w-24 h-24 lg:w-32 lg:h-32 glass rounded-[2.5rem] flex items-center justify-center text-secondary mb-10 mx-auto group-hover:scale-110 group-hover:-rotate-6 transition-all duration-700 shadow-2xl shadow-secondary/10">
+              <GraduationCap className="w-12 h-12 lg:w-16 lg:h-16" />
+            </div>
+            <h2 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 tracking-tighter uppercase transition-colors group-hover:text-secondary group-hover:italic">
+              Academy
+            </h2>
+            <div className="flex items-center justify-center gap-3 text-gray-500 font-bold uppercase tracking-[0.3em] text-xs md:text-sm translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-700">
+              Professional Training <ArrowRight className="w-5 h-5 text-secondary" />
+            </div>
+          </motion.div>
+        </Link>
+      </div>
+
       <Footer />
     </main>
   );

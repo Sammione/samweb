@@ -101,7 +101,7 @@ export default function ProductDetailPage() {
                 <div className="text-center">
                     <h1 className="text-6xl font-bold mb-4">404</h1>
                     <p className="text-xl text-gray-400 mb-8">Product not found</p>
-                    <Link href="/#products" className="btn-primary">Return Home</Link>
+                    <Link href="/services" className="btn-primary">Return to Services</Link>
                 </div>
             </div>
         );
@@ -116,9 +116,9 @@ export default function ProductDetailPage() {
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-secondary/10 blur-[120px] rounded-full -mr-64 -mt-64" />
 
                 <div className="max-w-6xl mx-auto relative z-10">
-                    <Link href="/#products" className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors mb-12 group">
+                    <Link href="/services" className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors mb-12 group">
                         <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-                        Back to Core Technologies
+                        Back to Services
                     </Link>
 
                     <div className="grid lg:grid-cols-2 gap-16 items-start">
