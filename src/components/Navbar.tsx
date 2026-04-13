@@ -10,13 +10,36 @@ import Image from "next/image";
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [activeSection, setActiveSection] = useState("");
 
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 20);
         };
+
+        const handleScrollSpy = () => {
+            const sections = ["home", "services", "about", "resources", "contact"];
+            const scrollPosition = window.scrollY + 100;
+
+            for (const section of sections) {
+                const element = document.getElementById(section);
+                if (element) {
+                    const offsetTop = element.offsetTop;
+                    const height = element.offsetHeight;
+                    if (scrollPosition >= offsetTop && scrollPosition < offsetTop + height) {
+                        setActiveSection(section);
+                        break;
+                    }
+                }
+            }
+        };
+
         window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
+        window.addEventListener("scroll", handleScrollSpy);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+            window.removeEventListener("scroll", handleScrollSpy);
+        };
     }, []);
 
     const navLinks = [
@@ -54,13 +77,25 @@ export default function Navbar() {
                         <Link
                             key={link.name}
                             href={link.href}
-                            className="text-sm font-medium text-gray-300 hover:text-white transition-colors"
+                            className={cn(
+                                "text-sm font-medium transition-all duration-300 relative group",
+                                activeSection === link.name.toLowerCase().replace(" us", "")
+                                    ? "text-secondary"
+                                    : "text-gray-300 hover:text-white"
+                            )}
                         >
                             {link.name}
+                            <span className={cn(
+                                "absolute -bottom-1 left-0 h-0.5 bg-secondary rounded-full transition-all duration-300",
+                                activeSection === link.name.toLowerCase().replace(" us", "")
+                                    ? "w-full"
+                                    : "w-0 group-hover:w-full"
+                            )} />
                         </Link>
                     ))}
-                    <Link href="/#contact" className="btn-primary py-2 text-sm">
-                        Contact Us
+                    <Link href="/#contact" className="btn-primary py-2 text-sm relative overflow-hidden group">
+                        <span className="relative z-10">Contact Us</span>
+                        <span className="absolute inset-0 bg-gradient-to-r from-secondary to-accent-light opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </Link>
                 </div>
 

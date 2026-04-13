@@ -6,6 +6,7 @@
   --background: #0B0F1A;
   --foreground: #FFFFFF;
   --secondary: #2563EB;
+  --secondary-glow: rgba(37, 99, 235, 0.3);
 }
 
 body {
@@ -17,7 +18,13 @@ body {
 }
 
 @layer base {
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-bold tracking-tight;
   }
 }
@@ -26,30 +33,342 @@ body {
   .glass {
     @apply bg-white/5 backdrop-blur-lg border border-white/10;
   }
-  
+
   .glass-card {
     @apply glass rounded-2xl p-6 transition-all duration-300 hover:border-secondary/50 hover:bg-white/10;
   }
 
   .btn-primary {
-    @apply bg-secondary hover:bg-accent-light text-white px-6 py-3 rounded-full font-semibold transition-all duration-300;
+    @apply bg-secondary hover:bg-accent-light text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg shadow-secondary/25 hover:shadow-secondary/40 hover:scale-105 active:scale-95;
   }
 
   .btn-outline {
-    @apply border border-white/20 hover:border-secondary hover:bg-secondary/10 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300;
+    @apply border border-white/20 hover:border-secondary hover:bg-secondary/10 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 active:scale-95;
   }
 
   .section-padding {
     @apply py-20 px-6 max-w-7xl mx-auto;
   }
+
+  /* Enhanced button with glow effect */
+  .btn-glow {
+    @apply bg-secondary text-white px-8 py-4 rounded-full font-bold transition-all duration-500 relative overflow-hidden;
+    box-shadow: 0 0 20px var(--secondary-glow), 0 0 40px rgba(37, 99, 235, 0.1);
+  }
+
+  .btn-glow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+  }
+
+  .btn-glow:hover::before {
+    left: 100%;
+  }
+
+  .btn-glow:hover {
+    box-shadow: 0 0 30px var(--secondary-glow), 0 0 60px rgba(37, 99, 235, 0.2);
+    transform: scale-105;
+  }
+
+  /* Text glow effect */
+  .text-glow {
+    text-shadow: 0 0 20px var(--secondary-glow), 0 0 40px rgba(37, 99, 235, 0.1);
+  }
+
+  /* Enhanced card with subtle animation */
+  .card-hover {
+    @apply transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl;
+  }
+
+  /* Gradient border effect */
+  .gradient-border {
+    position: relative;
+    background: linear-gradient(var(--background), var(--background)) padding-box,
+      linear-gradient(135deg, var(--secondary), transparent) border-box;
+    border: 2px solid transparent;
+    border-radius: 1.5rem;
+  }
+
+  /* Scroll indicator animation */
+  .scroll-indicator {
+    @apply flex flex-col items-center gap-2 text-gray-500;
+    animation: bounce 2s infinite;
+  }
+
+  /* Skeleton loader */
+  .skeleton {
+    @apply bg-gradient-to-r from-white/5 via-white/10 to-white/5 bg-[length:200%_100%] animate-pulse rounded-lg;
+  }
+
+  /* Focus visible for accessibility */
+  *:focus-visible {
+    @apply outline-2 outline-secondary outline-offset-2;
+  }
+
+  /* Smooth reveal animation */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Magnetic hover effect base */
+  .magnetic-hover {
+    @apply transition-all duration-300;
+  }
+
+  .magnetic-hover:hover {
+    transform: translateY(-4px);
+  }
+
+  /* Particle background effect */
+  .particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Enhanced gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-white via-secondary to-white bg-clip-text text-transparent;
+    background-size: 200% auto;
+    animation: gradientShift 3s ease infinite;
+  }
+
+  @keyframes gradientShift {
+
+    0%,
+    100% {
+      background-position: 0% center;
+    }
+
+    50% {
+      background-position: 200% center;
+    }
+  }
+
+  /* Shimmer effect */
+  .shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .shimmer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    animation: shimmer 3s infinite;
+  }
+
+  @keyframes shimmer {
+    0% {
+      left: -100%;
+    }
+
+    100% {
+      left: 100%;
+    }
+  }
+
+  /* Pulse ring effect */
+  .pulse-ring {
+    position: absolute;
+    border: 2px solid var(--secondary);
+    border-radius: 50%;
+    animation: pulseRing 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+  }
+
+  @keyframes pulseRing {
+    0% {
+      transform: scale(0.8);
+      opacity: 1;
+    }
+
+    100% {
+      transform: scale(2.4);
+      opacity: 0;
+    }
+  }
+
+  /* Form input focus states */
+  .input-field {
+    @apply bg-white/5 border border-white/10 rounded-xl px-6 py-4 focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all duration-300;
+  }
+
+  /* Badge styles */
+  .badge {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider;
+  }
+
+  .badge-primary {
+    @apply bg-secondary/20 text-secondary border border-secondary/30;
+  }
+
+  .badge-glow {
+    box-shadow: 0 0 10px var(--secondary-glow);
+  }
+
+  /* Section divider */
+  .section-divider {
+    @apply h-px w-24 bg-gradient-to-r from-transparent via-secondary/50 to-transparent mx-auto my-12;
+  }
+
+  /* Floating label animation */
+  .floating-label {
+    @apply absolute left-4 transition-all duration-300 pointer-events-none;
+  }
+
+  .floating-label.active {
+    @apply -top-2.5 text-xs bg-[#0B0F1A] px-2 text-secondary;
+  }
+
+  /* Progress bar */
+  .progress-bar {
+    @apply h-1 bg-white/10 rounded-full overflow-hidden;
+  }
+
+  .progress-bar-fill {
+    @apply h-full bg-secondary rounded-full transition-all duration-1000 ease-out;
+    box-shadow: 0 0 10px var(--secondary-glow);
+  }
+
+  /* Tooltip base */
+  .tooltip {
+    @apply relative;
+  }
+
+  .tooltip::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-8px);
+    padding: 0.5rem 1rem;
+    background: var(--background);
+    border: 1px solid white/10;
+    border-radius: 0.5rem;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+    z-index: 50;
+  }
+
+  .tooltip:hover::before {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-4px);
+  }
+
+  /* Backdrop blur overlay */
+  .blur-overlay {
+    @apply backdrop-blur-md bg-[#0B0F1A]/80;
+  }
+
+  /* Noise texture overlay */
+  .noise-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.02;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  }
 }
 
 @keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .animate-float {
   animation: float 6s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-10px);
+  }
+
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(37, 99, 235, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(37, 99, 235, 0.5);
+}
+
+/* Selection color */
+::selection {
+  background: rgba(37, 99, 235, 0.3);
+  color: white;
 }
